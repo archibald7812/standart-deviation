@@ -1,0 +1,136 @@
+html,
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: hsl(216, 12%, 8%);
+	font-family: "Overpass";
+}
+.wrapper {
+	flex: 1 1 auto;
+	width: 90%;
+	margin: 0 auto;
+	.main {
+		margin-top: 30%;
+		.maincard {
+			border-radius: 15px;
+			background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 10%));
+			padding: 20px;
+			.maincard-staricon {
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				background-color: hsl(213, 19%, 18%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.maincard-question {
+				margin-top: 20px;
+				color: white;
+				font-size: 20px;
+			}
+			.maincard-description {
+				margin-top: 20px;
+				color: hsl(216, 12%, 54%);
+			}
+			.maincard-stars {
+				margin-top: 20px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				li {
+					display: block;
+					height: 40px;
+					width: 40px;
+					border-radius: 50%;
+					background-color: hsl(213, 19%, 18%);
+					color: hsl(216, 12%, 54%);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 15px;
+					&:hover {
+						background-color: hsl(25, 97%, 53%);
+						color: white;
+					}
+				}
+				.active {
+					background-color: hsl(217, 12%, 63%);
+					color: white;
+				}
+			}
+			.maincard-submit {
+				margin-top: 20px;
+				color: white;
+				display: block;
+				width: 100%;
+				text-align: center;
+				height: 40px;
+				background-color: hsl(25, 97%, 53%);
+				border-radius: 20px;
+				letter-spacing: 2px;
+				font-size: 15px;
+				&:hover {
+					background-color: white;
+					color: hsl(25, 97%, 53%);
+				}
+			}
+		}
+		.thankyoucard {
+			border-radius: 15px;
+			background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 10%));
+			padding: 20px;
+			display: none;
+			.thankyoucard-img {
+				display: flex;
+				justify-content: center;
+			}
+			.thankyoucard-selected {
+				margin-top: 20px;
+				display: flex;
+				width: 100%;
+				height: 40px;
+				border: solid 1px hsl(25, 97%, 53%);
+				border-radius: 20px;
+				letter-spacing: 2px;
+				font-size: 15px;
+				color: hsl(25, 97%, 53%);
+				align-items: center;
+				justify-content: center;
+			}
+			.thankyoucard-title {
+				margin-top: 20px;
+				color: white;
+				font-size: 20px;
+				text-align: center;
+			}
+			.thankyoucard-description {
+				margin-top: 20px;
+				color: hsl(216, 12%, 54%);
+			}
+		}
+		.hidden {
+			display: none;
+		}
+	}
+}
+.footer {
+	font-size: 14px;
+	text-align: center;
+	color: hsl(216, 12%, 54%);
+	a {
+		color: hsl(228, 45%, 44%);
+		:visited {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}
+@media (min-width: 375px) {
+	.wrapper {
+		width: 340px;
+		.main {
+			margin-top: 30%;
+		}
+	}
+}
